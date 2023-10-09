@@ -1,3 +1,3 @@
 database_username = "kalaiyarasan"
-database_password="kjqYYemV2V0R5RE6"
+database_password="**********"
 databasename="Crud_2023"
