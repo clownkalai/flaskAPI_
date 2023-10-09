@@ -125,7 +125,7 @@ def all_templates():
 
 
 #get single templates
-@app.route('/template/{templateid}', methods=['GET'])
+@app.route('/template/<templateid>', methods=['GET'])
 @jwt_required()
 def get_Singletemplate(templateid:str):
     current_user = get_jwt_identity()
@@ -205,16 +205,7 @@ def delete_template(templateid:str):
 
 
 @app.route('/users', methods=['GET'])
-@jwt_required()
 def get_allUsers():
-    current_user = get_jwt_identity()
-    current_user = getUserByEmailId(current_user)
-    if current_user is None:
-        abort(401)  
-    try:
         user_list = find_all_collection("userInfo")
-    except:
-        return "Something went wrong."  ,500  
-
     return user_list
 
