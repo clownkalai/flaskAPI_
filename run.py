@@ -19,7 +19,7 @@ def user_register():
     hash_password = get_password_hash(str(data.get("password")))
     user_data ={
             "first_name":data.get("first_name"),
-            "last_name":data.get("lastname"),
+            "last_name":data.get("last_name"),
             "email":data.get("email"),
             "password":hash_password,
         }
