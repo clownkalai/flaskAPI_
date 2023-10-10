@@ -219,6 +219,3 @@ def unauthorized_error_handler(error):
         response.headers[header] = value
     return response
 
-
-if __name__ == "__main__":
-    app.run()
