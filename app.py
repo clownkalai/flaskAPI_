@@ -206,7 +206,7 @@ def delete_template(templateid:str):
 
 @app.route('/users', methods=['GET'])
 def get_allUsers():
-        user_list = find_all_collection("userInfo")
+    user_list = find_all_collection("userInfo")
     return user_list
 
 @app.errorhandler(401)
