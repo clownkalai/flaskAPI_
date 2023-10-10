@@ -5,7 +5,7 @@ from databaseConfig  import database_username,database_password,databasename
 # connect to database
 def dbconnect():
         #mongodb connection string
-        connection_string = f"mongodb+srv://{database_username}:{database_password}@cluster0.7g1bffo.mongodb.net/{databasename}"
+        connection_string = f"mongodb+srv://{database_username}:{database_password}@cluster0.7g1bffo.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp"
         
         # Create a MongoDB client
         client = MongoClient(connection_string)
